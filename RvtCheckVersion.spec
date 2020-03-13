@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['RvtCheckVersion.py'],
-             pathex=['C:\\Users\\poupincyril\\Documents\\CheckRvtVersion'],
+             pathex=['C:\\Users\\Cyril3\\Documents\\ExePython'],
              binaries=[],
              datas=[],
              hiddenimports=[],
