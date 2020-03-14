@@ -1,5 +1,5 @@
 # coding : utf-8
-#writting by POUPIN.C
+#CopyRight(c) 2019- POUPIN.C
 #v1.3
 import tkinter 
 from tkinter import filedialog
