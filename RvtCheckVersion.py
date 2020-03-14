@@ -1,6 +1,6 @@
 # coding : utf-8
 #writting by POUPIN.C
-#v1.2
+#v1.3
 import tkinter 
 from tkinter import filedialog
 from tkinter import messagebox
@@ -10,6 +10,7 @@ import os.path as op
 import olefile
 import re
 import base64
+import webbrowser
 import encodings
 
 
@@ -28,13 +29,17 @@ class Interface(Frame):
     self.message.pack()
     self.info = Label(self, text="_", bd=3)
     self.info.pack()
-    self.bouton_quitter = Button(self, text="Quitter", command=self.quit)
-    self.bouton_quitter.pack(side="left")
-    self.bouton_cliquer = Button(self, text="Choisir le fichier", fg="red", command=self.cliquer)
-    self.bouton_cliquer.pack(side="right")
+    self.bouton_quitter = Button(self, text="Quitter", command=self.quit, bd=2)
+    self.bouton_quitter.pack(side="left", padx=10,pady=10)
+    self.bouton_cliquer = Button(self, text="Choisir le fichier", fg="red", command=self.cliquer, bd=2)
+    self.bouton_cliquer.pack(side="right", padx=10,pady=10)
+    self.lbl = Label(fenetre, text=r"https://voltadynabim.blogspot.com/", fg="blue", cursor="hand2")
+    self.lbl.pack()
+    self.lbl.bind("<Button-1>", self.callback)
  
 
-
+  def callback(self, event):
+    webbrowser.open_new(event.widget.cget("text"))
   def cliquer(self):
     def getfileInfo(bfi):
       msgbox = 'Version non trouvée'
