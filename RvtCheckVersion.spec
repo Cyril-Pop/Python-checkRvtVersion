@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['RvtCheckVersion.py'],
-             pathex=['C:\\Users\\Cyril3\\Documents\\ExePython'],
+             pathex=['F:\\CYRIL_PERSO\\DOC&CATALOGUES2\\DVDN°2  LOGICIELS\\PYTHON\\CheckRvtVersion\\Compile'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -30,4 +30,4 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=False )
+          console=False , icon='InfoCheck.ico')
